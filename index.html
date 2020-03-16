@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-            <title>Каталог автомобильных рулей</title>
-            <meta charset="utf-8">
+<head>
+	<title>Каталог DriverWheels</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
 
-
-    </head>
-    <body>
-
-    </body>    
-
+<body>
+	<div class="fixed__container">
+		<header>
+				<h1 class="caption">Каталог лекал</h1>
+		</header>
+		
+		<main>
+			<form class="formSearch" action="phpScript/db_driverWheels.php">
+				<label for="nameAvto">Марка:</label>
+				
+				<input id="nameAvto" class="formSearch__input" type="text" placeholder="введите Марку" required> </input>
+				
+				<label for="modelAvto">Модель:</label>
+				
+				<input id="modelAvto" class="formSearch__input" type="text" placeholder="введите Модель" required> </input>
+				<input class="formSearch__btn" type="reset" value="Сбросить">
+				<input class="formSearch__btn" type="submit" value="Показать">
+			</form>
+		</main>
+	
+		<footer>
+		</footer>
+	</div>
+	
+</body>
+	
 </html>
