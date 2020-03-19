@@ -14,25 +14,27 @@
 		<header>
 				<h1 class="caption">Каталог лекал</h1>
 		</header>
-		
+
 		<main>
-			<form class="formSearch" action="phpScript/db_driverWheels.php">
+			<form class="formSearch" action="phpScript/db_driverWheels.php" method="GET">
 				<label for="nameAvto">Марка:</label>
-				
-				<input id="nameAvto" class="formSearch__input" type="text" placeholder="введите Марку" required> </input>
-				
+				<input id="nameAvto" name="carName" class="formSearch__input" type="text" placeholder="введите Марку" required>
+
 				<label for="modelAvto">Модель:</label>
-				
-				<input id="modelAvto" class="formSearch__input" type="text" placeholder="введите Модель" required> </input>
+				<input id="modelAvto" name="carModel" class="formSearch__input" type="text" placeholder="введите Модель" required>
+
+				<label for="generation">Поколение:</label>
+				<input id="generation" class="formSearch__input" type="text" name="carGeneration" placeholder="введите Поколение" required>
+
 				<input class="formSearch__btn" type="reset" value="Сбросить">
-				<input class="formSearch__btn" type="submit" value="Показать">
+				<input class="formSearch__btn" type="submit" value="Добавить">
 			</form>
 		</main>
-	
+
 		<footer>
 		</footer>
 	</div>
-	
+
 </body>
-	
+
 </html>

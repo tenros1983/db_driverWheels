@@ -10,10 +10,13 @@
 		exit();
 	}
 
- 	//$us_QueryResult = $us_Connecting->query("SELECT * FROM carCatalog");
+	$stmp = $us_Connecting->prepare("INSERT INTO tbl_carCatalog(carName, carModel, carGeneration) VALUES(?, ?, ?)");
+	$stmp->bind_param('sss', $carName, $carModel, $carGeneration);
 
-	$stmp = $us_Connecting->prepare("INSERT INTO tbl_carCatalog VALUES(?, ?)");
-	$stmp->bind_param(Null, "Audi", "A6", Null, Null);
+  $carName = $_GET['carName'];
+	$carModel = $_GET['carModel'];
+	$carGeneration = $_GET['carGeneration'];
+
 	$stmp->execute();
 	$stmp->close();
 
